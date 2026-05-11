@@ -3,18 +3,65 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Giago Launch Planner</title>
-    <link rel="icon" href="https://www.giago.com/favicon.ico" />
+    <title>Beyond20 Launch Planner</title>
+    <link rel="icon" href="https://www.beyond20.com.au/favicon.ico" />
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.min.js"></script>
     
     <style>
-      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      /* Base Styles */
+      body { 
+        margin: 0; 
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+        background-color: #f9fafb; 
+      }
+
+      /* Branded Header Styling */
+      .app-header {
+        background-color: #ffffff;
+        padding: 12px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #1a1a1a; /* Professional dark accent line */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      }
+
+      .logo-container img {
+        height: 60px; /* Constrains the square logo to a professional height */
+        width: auto;
+        display: block;
+      }
+
+      .project-label {
+        color: #1a1a1a;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      /* Ensures the root container for the Gantt chart has some breathing room */
+      #root {
+        padding: 20px;
+      }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <header class="app-header">
+      <div class="logo-container">
+        <a href="https://www.beyond20.com.au" target="_blank" rel="noopener noreferrer">
+          <img src="https://static.wixstatic.com/media/6ae403_7c8c0b7a789c49b5882443dc4ce55cf9~mv2.jpg/v1/fill/w_318,h_316,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/B20%20Logo_edited_edited.jpg" 
+               alt="Beyond20 Logo">
+        </a>
+      </div>
+      <div class="project-label">FMCG Project Planner</div>
+    </header>
+
     <div id="root"></div>
+
   </body>
 </html>
